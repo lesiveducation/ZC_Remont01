@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ремонт квартир в Уфе «под ключ» без скрытых доплат — гарантия 3 года</title>
+<meta name="description" content="Ремонт квартир в Уфе «под ключ» без нервов и скрытых доплат. Фиксируем смету и сроки в договоре. С 2015 года сдано более 400 квартир. Гарантия 3 года. Рассчитайте точную смету за 15 минут.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- ═══════════════════════════════════════════════════════════
+     ССЫЛКА НА ЯНДЕКС-ФОРМУ: все кнопки «Рассчитать смету»
+     открывают эту форму в новой вкладке.
+     ═══════════════════════════════════════════════════════════ -->
+<script>
+  const YANDEX_FORM_URL = "https://forms.yandex.ru/u/6ab416a34936392737d59498";
+</script>
+<style>
+  :root{
+    --cream:#FAF8F5;
+    --white:#FFFFFF;
+    --orange:#FF7A3D;
+    --orange-dark:#F05F1F;
+    --orange-soft:#FFF1E8;
+    --blue:#E9F2F7;
+    --blue-strong:#7FA9C4;
+    --blue-deep:#31566E;
+    --text:#2E2A26;
+    --muted:#6F6961;
+    --line:#EAE4DC;
+    --radius-lg:24px;
+    --radius-md:16px;
+    --shadow-card:0 18px 40px -18px rgba(46,42,38,.16);
+    --shadow-btn:0 12px 26px -10px rgba(240,95,31,.55);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    color:var(--text);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+
+  .container{max-width:1160px;margin:0 auto;padding:0 24px}
+  .section{padding:96px 0}
+
+  /* ─────────── Кнопки ─────────── */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--orange);color:#fff;border:none;cursor:pointer;
+    font-family:inherit;font-weight:700;font-size:17px;
+    padding:18px 34px;border-radius:20px;
+    box-shadow:var(--shadow-btn);
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+    text-align:center;
+  }
+  .btn:hover{transform:translateY(-3px);background:var(--orange-dark)}
+  .btn:active{transform:translateY(-1px)}
+
+  /* ─────────── Шапка ─────────── */
+  .header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(250,248,245,.86);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:18px 24px;max-width:1160px;margin:0 auto;
+  }
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px}
+  .logo-mark{
+    width:42px;height:42px;border-radius:14px;flex-shrink:0;
+    background:var(--orange);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 20px -8px rgba(240,95,31,.5);
+  }
+  .logo-mark svg{width:24px;height:24px;stroke:#fff}
+  .header-contacts{display:flex;align-items:center;gap:20px}
+  .header-phone{display:flex;flex-direction:column;align-items:flex-end}
+  .header-phone b{font-size:17px;letter-spacing:.2px}
+  .header-phone span{font-size:12.5px;color:var(--muted)}
+  .header-btn{padding:13px 26px;font-size:15px;border-radius:16px}
+
+  /* ─────────── Hero ─────────── */
+  .hero{padding:72px 0 88px;overflow:hidden}
+  .hero-inner{
+    display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;
+  }
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--blue);color:var(--blue-deep);
+    font-weight:600;font-size:14px;padding:8px 16px;border-radius:999px;
+    margin-bottom:22px;
+  }
+  .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#3FA96B}
+  .hero h1{
+    font-size:46px;line-height:1.15;font-weight:800;letter-spacing:-.5px;
+    margin-bottom:20px;
+  }
+  .hero h1 .mark{
+    background:linear-gradient(180deg,transparent 62%,rgba(255,122,61,.35) 62%);
+    display:inline;
+  }
+  .hero-sub{
+    font-size:19px;color:var(--muted);max-width:520px;margin-bottom:34px;
+  }
+  .hero-sub b{color:var(--text)}
+  .hero-cta{margin-bottom:16px}
+  .microtext{font-size:14px;color:var(--muted);max-width:460px}
+  .microtext b{color:var(--orange-dark)}
+  .hero-media{position:relative}
+  .photo-frame{
+    border-radius:var(--radius-lg);overflow:hidden;
+    box-shadow:var(--shadow-card);
+    background:linear-gradient(150deg,#E3EEF5,#CFE0EA);
+    aspect-ratio:4/4.6;display:flex;align-items:flex-end;justify-content:center;
+    padding-bottom:14px;
+  }
+  .float-card{
+    position:absolute;background:#fff;border-radius:var(--radius-md);
+    box-shadow:var(--shadow-card);padding:14px 16px;display:flex;align-items:center;gap:12px;
+    font-size:13.5px;font-weight:600;
+  }
+  .float-card.one{top:26px;left:-34px;animation:float 5s ease-in-out infinite}
+  .float-card.two{bottom:40px;right:-26px;animation:float 6s ease-in-out .7s infinite}
+  .float-card .ico{
+    width:40px;height:40px;border-radius:12px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .float-card .ico svg{width:22px;height:22px;stroke:#fff}
+  .float-card .ico.orange{background:var(--orange)}
+  .float-card .ico.blue{background:var(--blue-strong)}
+  .float-card small{display:block;font-weight:500;color:var(--muted);font-size:11.5px;line-height:1.3}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+  /* ─────────── Боли клиента ─────────── */
+  .pains{background:linear-gradient(180deg,#F4EFE8,#FAF8F5);padding-top:88px;padding-bottom:96px}
+  .section-title{text-align:center;max-width:720px;margin:0 auto 56px}
+  .section-title h2{font-size:38px;font-weight:800;letter-spacing:-.4px;line-height:1.2}
+  .section-title h2 .mark{background:linear-gradient(180deg,transparent 62%,rgba(255,122,61,.35) 62%)}
+  .section-title p{margin-top:14px;color:var(--muted);font-size:17px}
+  .pains-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .pain-card{
+    background:#fff;border-radius:var(--radius-lg);padding:34px 30px;
+    box-shadow:var(--shadow-card);
+    transition:transform .25s ease;
+    display:flex;flex-direction:column;
+  }
+  .pain-card:hover{transform:translateY(-6px)}
+  .pain-ico{
+    width:56px;height:56px;border-radius:18px;margin-bottom:22px;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .pain-ico svg{width:28px;height:28px;stroke:#fff}
+  .pain-ico.orange{background:var(--orange);box-shadow:0 10px 22px -8px rgba(240,95,31,.5)}
+  .pain-ico.blue{background:var(--blue-strong);box-shadow:0 10px 22px -8px rgba(127,169,196,.55)}
+  .pain-ico.green{background:#5FA87F;box-shadow:0 10px 22px -8px rgba(95,168,127,.5)}
+  .pain-card h3{font-size:19px;font-weight:700;line-height:1.35;margin-bottom:12px}
+  .pain-card p{color:var(--muted);font-size:15.5px}
+  .pain-card .quote{
+    margin-top:20px;padding-top:18px;border-top:1px dashed var(--line);
+    font-size:14.5px;font-style:italic;color:#57514A;
+  }
+
+  /* ─────────── Решения (УТП) ─────────── */
+  .solutions{padding:96px 0 40px}
+  .sol-row{
+    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+    padding-bottom:96px;
+  }
+  .sol-row.rev .sol-media{order:2}
+  .sol-row.rev .sol-text{order:1}
+  .sol-num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:44px;height:44px;border-radius:14px;
+    background:var(--orange-soft);color:var(--orange-dark);
+    font-weight:800;font-size:18px;margin-bottom:18px;
+  }
+  .sol-row.rev .sol-num{background:var(--blue);color:var(--blue-deep)}
+  .sol-text h3{font-size:29px;font-weight:800;line-height:1.25;letter-spacing:-.3px;margin-bottom:16px}
+  .sol-text h3 .mark{background:linear-gradient(180deg,transparent 62%,rgba(255,122,61,.35) 62%)}
+  .sol-text p{color:var(--muted);font-size:17px}
+  .sol-text p b{color:var(--text)}
+  .sol-media .photo-frame{
+    aspect-ratio:4/3;
+    background:linear-gradient(160deg,#CFE0EA,#B9D2E2);
+  }
+  .sol-media .float-card{
+    position:absolute;max-width:280px;font-size:13px;font-weight:500;
+  }
+
+  /* ─────────── Финальный оффер ─────────── */
+  .offer{
+    background:var(--blue);
+    background-image:radial-gradient(circle at 88% 12%,rgba(255,255,255,.5),transparent 40%);
+    border-radius:0;padding:96px 0;
+  }
+  .offer-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+  .offer-head .shield{
+    width:64px;height:64px;border-radius:20px;background:#fff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow-card);margin-bottom:24px;
+  }
+  .offer-head .shield svg{width:34px;height:34px;stroke:var(--orange)}
+  .offer-head h2{font-size:36px;font-weight:800;letter-spacing:-.4px;line-height:1.2;margin-bottom:20px}
+  .offer-head .offer-text{font-size:17px;color:#3D4B56;margin-bottom:16px}
+  .offer-head .offer-text b{color:var(--text)}
+  .offer-head .bonus{
+    display:flex;gap:14px;align-items:flex-start;
+    background:#fff;border-radius:var(--radius-md);
+    padding:18px 20px;box-shadow:var(--shadow-card);margin-bottom:14px;
+  }
+  .offer-head .bonus .gift{
+    width:42px;height:42px;border-radius:12px;background:var(--orange);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .offer-head .bonus .gift svg{width:22px;height:22px;stroke:#fff}
+  .offer-head .bonus .bonus-title{font-weight:700;font-size:16px;line-height:1.4}
+  .offer-head .bonus .bonus-title span{color:var(--orange-dark)}
+  .offer-head .bonus .bonus-sub{font-size:14px;color:var(--muted);margin-top:4px;line-height:1.5}
+  .offer-head .urgency{
+    font-size:14px;color:var(--blue-deep);
+    background:rgba(255,255,255,.65);
+    border:1px dashed var(--blue-strong);
+    border-radius:var(--radius-md);padding:12px 16px;line-height:1.55;
+  }
+  .offer-card{
+    background:#fff;border-radius:var(--radius-lg);padding:38px 34px;
+    box-shadow:var(--shadow-card);
+  }
+  .offer-card h3{
+    font-size:22px;font-weight:800;margin-bottom:22px;line-height:1.3;text-align:center;
+  }
+  .ya-form-wrap{overflow:hidden;border-radius:var(--radius-md)}
+  .ya-form-wrap iframe{width:100%;display:block}
+  .offer-card .microtext{text-align:center;margin:16px auto 0}
+  .offer-card .privacy{
+    margin-top:16px;text-align:center;font-size:12px;color:var(--muted);line-height:1.5;
+  }
+
+  /* ─────────── Подвал ─────────── */
+  .footer{padding:40px 0;border-top:1px solid var(--line)}
+  .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .footer p{color:var(--muted);font-size:14px}
+
+  /* ─────────── Адаптив ─────────── */
+  @media(max-width:980px){
+    .hero-inner{grid-template-columns:1fr;gap:44px}
+    .hero h1{font-size:36px}
+    .pains-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+    .sol-row{grid-template-columns:1fr;gap:36px}
+    .sol-row.rev .sol-media{order:1}
+    .sol-row.rev .sol-text{order:2}
+    .offer-inner{grid-template-columns:1fr;gap:44px}
+    .float-card.one{left:0}
+    .float-card.two{right:0}
+  }
+  @media(max-width:640px){
+    .section{padding:64px 0}
+    .hero{padding:48px 0 64px}
+    .header-phone{display:none}
+    .header-btn{padding:12px 18px;font-size:14px}
+    .section-title h2,.offer-head h2{font-size:29px}
+    .hero h1{font-size:30px}
+    .hero-sub{font-size:17px}
+    .sol-text h3{font-size:24px}
+    .sol-row{padding-bottom:56px}
+    .offer{padding:72px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ ШАПКА ═══════════ -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">
+        <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21V11h6v10M12 11v4"/></svg>
+      </span>
+      <span>РемонтУфа</span>
+    </a>
+    <div class="header-contacts">
+      <div class="header-phone">
+        <b>+7 (347) 000-00-00</b>
+        <span>Ежедневно с 9:00 до 21:00</span>
+      </div>
+      <a class="btn header-btn" href="#" onclick="goForm(event)">Рассчитать смету</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ═══════════ БЛОК 1. HERO ═══════════ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge"><span class="dot"></span> Работаем в Уфе с 2015 года</div>
+        <h1>Ремонт квартир в Уфе <span class="mark">«под ключ»</span> без ваших нервов и скрытых доплат.</h1>
+        <p class="hero-sub">Фиксируем <b>смету и сроки в договоре</b>. С 2015 года сдали более <b>400 квартир</b>. Гарантия 3 года, оплата по этапам, прораб на связи 24/7.</p>
+        <a class="btn hero-cta" href="#" onclick="goForm(event)">
+          Рассчитать точную смету
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="microtext">Ответим в течение <b>15 минут</b>, назовем честную цену и пришлем каталог наших работ с ценами.</p>
+      </div>
+
+      <div class="hero-media">
+        <div class="photo-frame">
+          <!-- ЗДЕСЬ: реальное фото прораба в фирменном жилете с планшетом на объекте в Уфе -->
+          <svg width="240" height="240" viewBox="0 0 24 24" fill="none" stroke="#8FB3C9" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z"/>
+            <circle cx="12" cy="10" r="1.6"/>
+            <path d="M9.5 7.5a2.6 2.6 0 105 0"/>
+          </svg>
+        </div>
+        <div class="float-card one">
+          <span class="ico orange"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3v6a3 3 0 006 0V3m0 6a3 3 0 006 0V3M8.5 9v12M15.5 9v12"/></svg></span>
+          <div>Смета зафиксирована<small>в договоре, без доплат</small></div>
+        </div>
+        <div class="float-card two">
+          <span class="ico blue"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div>Прораб на связи<small>отчеты в чате 24/7</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ БЛОК 2. БОЛИ КЛИЕНТА ═══════════ -->
+  <section class="pains">
+    <div class="container">
+      <div class="section-title">
+        <h2>Знакомы ли вам эти ситуации при общении с <span class="mark">другими подрядчиками?</span></h2>
+        <p>Мы ремонтируем квартиры с 2015 года и каждый день слышим эти фразы от наших клиентов.</p>
+      </div>
+      <div class="pains-grid">
+
+        <div class="pain-card">
+          <div class="pain-ico orange">
+            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M3 11l4-8h10l4 8-4 8H7z"/><path d="M9 7h.01M15 7h.01M12 7v4m-2 3h4"/></svg>
+          </div>
+          <h3>«По телефону назвали одну цену, а в процессе она выросла в полтора раза»</h3>
+          <p>Мастера кивают: «Ну вы же забыли про стяжку, а это отдельные деньги». В итоге бюджет пробит, а деньги кончились.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-ico blue">
+            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 13a4 4 0 008 0M9 8h.01M15 8h.01M12 8v3"/></svg>
+          </div>
+          <h3>«Приходится после работы ехать на объект и устраивать разборки»</h3>
+          <p>Бригада то пропадает на неделю, то просто пьет на объекте. Вы тратите свои выходные, чтобы проконтролировать то, за что уже заплатили.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-ico green">
+            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M4 20L20 4M7 7l2 4M10 10l2 4M13 13l2 4M16 16l2 4"/></svg>
+          </div>
+          <h3>«Кривые стены и отвалившаяся плитка — это не брак, а "усадка дома"»</h3>
+          <p>Мастера перекладывают ответственность на застройщика или материалы, а вам жить с этими «косяками» следующие 10 лет.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ БЛОК 3. РЕШЕНИЯ (УТП) ═══════════ -->
+  <section class="solutions">
+    <div class="container">
+      <div class="section-title">
+        <h2>Как мы работаем, чтобы вы просто <span class="mark">наслаждались процессом</span></h2>
+        <p>Три простых принципа, которые снимают все страхи клиента.</p>
+      </div>
+
+      <!-- Пункт 1 -->
+      <div class="sol-row">
+        <div class="sol-text">
+          <span class="sol-num">01</span>
+          <h3>Прозрачная смета <span class="mark">до копейки</span></h3>
+          <p>Перед стартом мы составляем <b>детальную смету</b>. Вы видите, за что платите. Эта цена <b>фиксируется в договоре</b>. Никаких «внезапных» доплат в процессе — все риски мы берем на себя.</p>
+        </div>
+        <div class="sol-media">
+          <div class="photo-frame">
+            <!-- ЗДЕСЬ: реальный скриншот детальной сметы (Excel) -->
+            <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="#8FB3C9" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 15h6M9 9h2"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Пункт 2 -->
+      <div class="sol-row rev">
+        <div class="sol-text">
+          <span class="sol-num">02</span>
+          <h3>Ремонт <span class="mark">без вашего присутствия</span></h3>
+          <p>За каждым объектом закреплен <b>персональный прораб</b>. Вы получаете ежедневные фото- и видеоотчеты в закрытом чате. Вам не нужно ехать на объект — вы видите всю картину на смартфоне, пока пьете утренний кофе.</p>
+        </div>
+        <div class="sol-media">
+          <div class="photo-frame">
+            <!-- ЗДЕСЬ: реальный скриншот фото-отчетов из WhatsApp/Telegram -->
+            <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="#8FB3C9" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 6h4M9 12l2 2 4-4M12 14l2-2"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Пункт 3 -->
+      <div class="sol-row">
+        <div class="sol-text">
+          <span class="sol-num">03</span>
+          <h3>Многоступенчатый <span class="mark">контроль качества</span></h3>
+          <p>Мы не ждем, пока вы найдете недочет. У нас есть <b>внутренний технадзор</b>: прораб принимает работу мастеров, а затем <b>независимый инженер</b> проверяет работу прораба. Только после этого мы приглашаем вас на приемку.</p>
+        </div>
+        <div class="sol-media">
+          <div class="photo-frame">
+            <!-- ЗДЕСЬ: реальное фото технадзора с лазерным уровнем на объекте -->
+            <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="#8FB3C9" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4l9 6 9-6M3 20h18M5 20v-6h14v6M12 10v6"/></svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ БЛОК 4. ОФФЕР И ФИНАЛЬНЫЙ CTA ═══════════ -->
+  <section class="offer">
+    <div class="container offer-inner">
+      <div class="offer-head">
+        <div class="shield">
+          <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h2>Осень — сезон сдачи новостроек, и наши бригады расписаны на недели вперед.</h2>
+        <p class="offer-text">Но мы зарезервировали для вас <b>3 свободных слота</b> на этот месяц. Закажите ремонт «под ключ» до 31 октября и получите <b>независимый технический надзор инженера</b> на весь период ремонта в подарок <b>(ваша экономия — 45 000 ₽)</b>. Инженер будет проверять бригаду вместо вас, пока вы занимаетесь своими делами.</p>
+        <div class="bonus">
+          <span class="gift">
+            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4"/><path d="M5 12v9h14v-9M12 8v13M12 8s-1-5-4-5c-2 0-3 2-1 4s6 1 5 1zM12 8s1-5 4-5c2 0 3 2 1 4s-6 1-5 1z"/></svg>
+          </span>
+          <div>
+            <div class="bonus-title">Технадзор инженера <span>в подарок</span></div>
+            <div class="bonus-sub">Экономия — 45 000 ₽ на весь период ремонта</div>
+          </div>
+        </div>
+        <p class="urgency">С 1 октября поставщики поднимают прайс на черновые материалы на 15%, поэтому мы фиксируем старые цены только для тех, кто оставит заявку сейчас.</p>
+      </div>
+
+      <div class="offer-card">
+        <h3>Рассчитайте точную смету под вашу квартиру</h3>
+        <div class="ya-form-wrap">
+          <iframe src="https://forms.yandex.ru/u/6ab416a34936392737d59498?iframe=1" frameborder="0" name="ya-form-6ab416a34936392737d59498" width="650"></iframe>
+        </div>
+        <p class="microtext">Ответим в течение <b>15 минут</b>, назовем честную цену и пришлем каталог наших работ с ценами.</p>
+        <p class="privacy">Отправляя форму, вы соглашаетесь с политикой конфиденциальности. Никакого спама — только ответ на ваш запрос.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════ ПОДВАЛ ═══════════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">
+        <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21V11h6v10M12 11v4"/></svg>
+      </span>
+      <span>РемонтУфа</span>
+    </a>
+    <p>Ремонт квартир в Уфе «под ключ» с 2015 года. Гарантия 3 года.</p>
+    <p>+7 (347) 000-00-00</p>
+  </div>
+</footer>
+
+<script>
+  function goForm(e){
+    if(e && e.preventDefault){e.preventDefault()}
+    window.open(YANDEX_FORM_URL, "_blank");
+  }
+</script>
+<script src="https://forms.yandex.ru/_static/embed.js"></script>
+
+</body>
+</html>
