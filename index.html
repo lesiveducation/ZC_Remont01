@@ -237,8 +237,7 @@
   .offer-card h3{
     font-size:22px;font-weight:800;margin-bottom:22px;line-height:1.3;text-align:center;
   }
-  .ya-form-wrap{overflow:hidden;border-radius:var(--radius-md)}
-  .ya-form-wrap iframe{width:100%;display:block}
+  .offer-btn{width:100%;font-size:17px}
   .offer-card .microtext{text-align:center;margin:16px auto 0}
   .offer-card .privacy{
     margin-top:16px;text-align:center;font-size:12px;color:var(--muted);line-height:1.5;
@@ -449,11 +448,12 @@
 
       <div class="offer-card">
         <h3>Рассчитайте точную смету под вашу квартиру</h3>
-        <div class="ya-form-wrap">
-          <iframe src="https://forms.yandex.ru/u/6ab416a34936392737d59498?iframe=1" frameborder="0" name="ya-form-6ab416a34936392737d59498" width="650"></iframe>
-        </div>
+        <a class="btn offer-btn" href="#" onclick="goForm(event)">
+          Рассчитать точную смету
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
         <p class="microtext">Ответим в течение <b>15 минут</b>, назовем честную цену и пришлем каталог наших работ с ценами.</p>
-        <p class="privacy">Отправляя форму, вы соглашаетесь с политикой конфиденциальности. Никакого спама — только ответ на ваш запрос.</p>
+        <p class="privacy">Нажимая кнопку, вы переходите в форму заявки на Яндекс.Форме. Никакого спама — только ответ на ваш запрос.</p>
       </div>
     </div>
   </section>
@@ -480,7 +480,6 @@
     window.open(YANDEX_FORM_URL, "_blank");
   }
 </script>
-<script src="https://forms.yandex.ru/_static/embed.js"></script>
 
 </body>
 </html>
