@@ -119,9 +119,9 @@
     border-radius:var(--radius-lg);overflow:hidden;
     box-shadow:var(--shadow-card);
     background:linear-gradient(150deg,#E3EEF5,#CFE0EA);
-    aspect-ratio:4/4.6;display:flex;align-items:flex-end;justify-content:center;
-    padding-bottom:14px;
+    aspect-ratio:4/4.6;position:relative;
   }
+  .photo-frame svg{display:block;width:100%;height:100%}
   .float-card{
     position:absolute;background:#fff;border-radius:var(--radius-md);
     box-shadow:var(--shadow-card);padding:14px 16px;display:flex;align-items:center;gap:12px;
@@ -313,11 +313,63 @@
 
       <div class="hero-media">
         <div class="photo-frame">
-          <!-- ЗДЕСЬ: реальное фото прораба в фирменном жилете с планшетом на объекте в Уфе -->
-          <svg width="240" height="240" viewBox="0 0 24 24" fill="none" stroke="#8FB3C9" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z"/>
-            <circle cx="12" cy="10" r="1.6"/>
-            <path d="M9.5 7.5a2.6 2.6 0 105 0"/>
+          <!-- Иллюстрация: прораб в фирменной жилетке с планшетом на объекте. Для реального фото замените <svg> на <img src="proab.jpg" alt="..."> -->
+          <svg width="100%" height="100%" viewBox="0 0 400 460" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Прораб в фирменной жилетке с планшетом на объекте в Уфе">
+            <defs>
+              <linearGradient id="hWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4EEE3"/><stop offset="1" stop-color="#EAE0D0"/></linearGradient>
+              <linearGradient id="hSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CDE5F1"/><stop offset="1" stop-color="#E7F3F8"/></linearGradient>
+            </defs>
+            <!-- стены и пол -->
+            <rect x="0" y="0" width="400" height="360" fill="url(#hWall)"/>
+            <rect x="0" y="360" width="400" height="100" fill="#E6DBCC"/>
+            <rect x="0" y="348" width="400" height="12" fill="#D6C9B5"/>
+            <!-- окно -->
+            <rect x="252" y="64" width="122" height="158" rx="8" fill="#FFFFFF" stroke="#DCD0BE" stroke-width="3"/>
+            <rect x="262" y="74" width="102" height="138" rx="4" fill="url(#hSky)"/>
+            <line x1="290" y1="74" x2="290" y2="212" stroke="#FFFFFF" stroke-width="8"/>
+            <line x1="262" y1="143" x2="364" y2="143" stroke="#FFFFFF" stroke-width="8"/>
+            <rect x="246" y="222" width="134" height="14" rx="6" fill="#FFFFFF"/>
+            <!-- растение -->
+            <ellipse cx="78" cy="316" rx="16" ry="26" fill="#86B68C"/>
+            <ellipse cx="68" cy="330" rx="13" ry="20" fill="#6FA47E"/>
+            <ellipse cx="90" cy="330" rx="13" ry="20" fill="#6FA47E"/>
+            <path d="M58 322 q-14 6 -12 20 l34 6 q8 -12 -4 -22 z" fill="#7FA9C4"/>
+            <!-- тень -->
+            <ellipse cx="185" cy="368" rx="72" ry="12" fill="#C7B9A4" opacity=".5"/>
+            <!-- персонаж -->
+            <!-- ноги и ботинки -->
+            <rect x="152" y="296" width="26" height="58" rx="10" fill="#5B6B7A"/>
+            <rect x="192" y="296" width="26" height="58" rx="10" fill="#5B6B7A"/>
+            <rect x="147" y="352" width="36" height="15" rx="7" fill="#41505C"/>
+            <rect x="187" y="352" width="36" height="15" rx="7" fill="#41505C"/>
+            <!-- туловище (рубашка) и руки -->
+            <rect x="146" y="206" width="80" height="102" rx="20" fill="#FFFFFF"/>
+            <rect x="140" y="214" width="16" height="74" rx="8" fill="#FFFFFF"/>
+            <rect x="216" y="214" width="16" height="74" rx="8" fill="#FFFFFF"/>
+            <!-- жилет -->
+            <rect x="140" y="202" width="92" height="96" rx="18" fill="#FF7A3D"/>
+            <rect x="146" y="224" width="10" height="62" rx="5" fill="#D8F0D8"/>
+            <rect x="216" y="224" width="10" height="62" rx="5" fill="#D8F0D8"/>
+            <!-- планшет в руках -->
+            <circle cx="158" cy="284" r="7" fill="#F2C49B"/>
+            <circle cx="214" cy="284" r="7" fill="#F2C49B"/>
+            <rect x="160" y="242" width="52" height="46" rx="9" fill="#E9F2F7" stroke="#FFFFFF" stroke-width="3"/>
+            <rect x="167" y="250" width="16" height="6" rx="3" fill="#FF7A3D"/>
+            <rect x="167" y="260" width="26" height="6" rx="3" fill="#7FA9C4"/>
+            <rect x="167" y="270" width="20" height="6" rx="3" fill="#D6E7F0"/>
+            <!-- голова -->
+            <circle cx="186" cy="176" r="36" fill="#F2C49B"/>
+            <path d="M150 176 a36 36 0 0 1 72 0 z" fill="#4A3B32"/>
+            <!-- лицо -->
+            <circle cx="175" cy="180" r="3.5" fill="#3A322C"/>
+            <circle cx="196" cy="180" r="3.5" fill="#3A322C"/>
+            <path d="M175 194 q11 8 22 0" stroke="#3A322C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="170" cy="191" r="5" fill="#F5BFA1" opacity=".55"/>
+            <circle cx="201" cy="191" r="5" fill="#F5BFA1" opacity=".55"/>
+            <!-- искры-декор -->
+            <circle cx="302" cy="52" r="6" fill="#FF7A3D"/>
+            <circle cx="318" cy="62" r="3" fill="#FF7A3D" opacity=".8"/>
+            <path d="M56 110 l0 14 M49 117 l14 0" stroke="#FF7A3D" stroke-width="3" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="float-card one">
@@ -386,8 +438,43 @@
         </div>
         <div class="sol-media">
           <div class="photo-frame">
-            <!-- ЗДЕСЬ: реальный скриншот детальной сметы (Excel) -->
-            <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="#8FB3C9" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 15h6M9 9h2"/></svg>
+            <!-- Иллюстрация: детальная смета с зафиксированной ценой. Для реального скриншота замените <svg> на <img src="smeta.jpg" alt="..."> -->
+            <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Детальная смета ремонта с зафиксированной в договоре ценой">
+              <defs>
+                <linearGradient id="eBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8F1F5"/><stop offset="1" stop-color="#DCE9EF"/></linearGradient>
+              </defs>
+              <!-- фон -->
+              <rect x="0" y="0" width="400" height="300" fill="url(#eBg)"/>
+              <rect x="0" y="248" width="400" height="52" fill="#CBDCE4"/>
+              <!-- документ -->
+              <rect x="78" y="48" width="300" height="230" rx="14" fill="#EDE6DA" transform="rotate(-2 228 160)"/>
+              <rect x="70" y="40" width="300" height="232" rx="14" fill="#FFFFFF"/>
+              <!-- шапка -->
+              <rect x="88" y="66" width="264" height="42" rx="12" fill="#FF7A3D"/>
+              <circle cx="110" cy="87" r="11" fill="#FFFFFF" opacity=".92"/>
+              <path d="M105 87 l4 4 7 -8" stroke="#FF7A3D" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="130" y="93" font-family="Inter,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">Смета № 0142</text>
+              <text x="352" y="93" font-family="Inter,sans-serif" font-size="11" fill="#FFFFFF" opacity=".85" text-anchor="end">от 10.09.2026</text>
+              <!-- строки -->
+              <circle cx="104" cy="128" r="4" fill="#E8A97C"/>
+              <text x="118" y="132" font-family="Inter,sans-serif" font-size="12.5" fill="#6F6961">Стяжка пола</text>
+              <text x="318" y="132" font-family="Inter,sans-serif" font-size="13" fill="#6F6961" text-anchor="end">74 500 ₽</text>
+              <circle cx="104" cy="152" r="4" fill="#E8A97C"/>
+              <text x="118" y="156" font-family="Inter,sans-serif" font-size="12.5" fill="#6F6961">Электромонтаж</text>
+              <text x="318" y="156" font-family="Inter,sans-serif" font-size="13" fill="#6F6961" text-anchor="end">182 300 ₽</text>
+              <circle cx="104" cy="176" r="4" fill="#E8A97C"/>
+              <text x="118" y="180" font-family="Inter,sans-serif" font-size="12.5" fill="#6F6961">Покрытие стен и потолка</text>
+              <text x="318" y="180" font-family="Inter,sans-serif" font-size="13" fill="#6F6961" text-anchor="end">96 000 ₽</text>
+              <circle cx="104" cy="200" r="4" fill="#E8A97C"/>
+              <text x="118" y="204" font-family="Inter,sans-serif" font-size="12.5" fill="#6F6961">Сантехника и плитка</text>
+              <text x="318" y="204" font-family="Inter,sans-serif" font-size="13" fill="#6F6961" text-anchor="end">241 800 ₽</text>
+              <!-- итог -->
+              <rect x="88" y="220" width="264" height="46" rx="14" fill="#E9F2F7"/>
+              <text x="112" y="249" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#31566E">ИТОГО, закреплено в договоре</text>
+              <text x="326" y="250" font-family="Inter,sans-serif" font-size="18" font-weight="800" fill="#2E2A26" text-anchor="end">1 842 000 ₽</text>
+              <circle cx="312" cy="226" r="11" fill="#3FA96B"/>
+              <path d="M305 226 l5 5 8 -9" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
         </div>
       </div>
@@ -401,8 +488,51 @@
         </div>
         <div class="sol-media">
           <div class="photo-frame">
-            <!-- ЗДЕСЬ: реальный скриншот фото-отчетов из WhatsApp/Telegram -->
-            <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="#8FB3C9" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 6h4M9 12l2 2 4-4M12 14l2-2"/></svg>
+            <!-- Иллюстрация: отчет прораба в закрытом чате. Для реального скриншота замените <svg> на <img src="chat.jpg" alt="..."> -->
+            <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ежедневный фото-отчет прораба в закрытом чате">
+              <defs>
+                <linearGradient id="cBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3EFE7"/><stop offset="1" stop-color="#E9E2D6"/></linearGradient>
+                <linearGradient id="cPhoto" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9D6E6"/><stop offset="1" stop-color="#9DC3D8"/></linearGradient>
+              </defs>
+              <!-- фон -->
+              <rect x="0" y="0" width="400" height="300" fill="#EAF2F6"/>
+              <!-- корпус телефона -->
+              <rect x="118" y="18" width="164" height="264" rx="28" fill="#FCFAF7" stroke="#D9D0C3" stroke-width="2"/>
+              <rect x="158" y="26" width="84" height="6" rx="3" fill="#E3DCD0"/>
+              <rect x="180" y="274" width="40" height="4" rx="2" fill="#E3DCD0"/>
+              <!-- экран -->
+              <clipPath id="cClip"><rect x="128" y="40" width="144" height="232" rx="6"/></clipPath>
+              <g clip-path="url(#cClip)">
+                <rect x="128" y="40" width="144" height="232" fill="url(#cBg)"/>
+                <!-- шапка чата -->
+                <rect x="128" y="40" width="144" height="40" fill="#FFFFFF"/>
+                <line x1="128" y1="80" x2="272" y2="80" stroke="#E3DCD0" stroke-width="1.5"/>
+                <circle cx="143" cy="60" r="11" fill="#FF7A3D"/>
+                <text x="143" y="64" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">И</text>
+                <circle cx="157" cy="52" r="3" fill="#3FA96B" stroke="#FFFFFF" stroke-width="1.5"/>
+                <text x="164" y="59" font-family="Inter,sans-serif" font-size="11.5" font-weight="700" fill="#2E2A26">Ильдар, прораб</text>
+                <text x="164" y="72" font-family="Inter,sans-serif" font-size="9.5" fill="#7FA9C4">онлайн · отчет за сегодня</text>
+                <!-- дата -->
+                <rect x="172" y="88" width="56" height="16" rx="8" fill="#E4DED3"/>
+                <text x="200" y="100" font-family="Inter,sans-serif" font-size="9" fill="#8B8378" text-anchor="middle">Сегодня</text>
+                <!-- клиент -->
+                <rect x="136" y="112" width="88" height="26" rx="13" fill="#FFFFFF"/>
+                <text x="146" y="129" font-family="Inter,sans-serif" font-size="10.5" fill="#4A433B">Здравствуйте!</text>
+                <!-- фото-отчет -->
+                <rect x="136" y="144" width="118" height="76" rx="16" fill="#FF7A3D"/>
+                <rect x="143" y="151" width="104" height="58" rx="10" fill="url(#cPhoto)"/>
+                <rect x="143" y="189" width="104" height="20" rx="0" fill="#9DC3D8" opacity=".5"/>
+                <polygon points="191,176 201,180 191,184" fill="#FFFFFF" opacity=".95"/>
+                <circle cx="236" cy="160" r="3" fill="#3FA96B"/>
+                <text x="246" y="212" font-family="Inter,sans-serif" font-size="8" fill="#FFFFFF" text-anchor="end">10:12</text>
+                <!-- прораб -->
+                <rect x="140" y="226" width="124" height="26" rx="13" fill="#FF7A3D"/>
+                <text x="152" y="243" font-family="Inter,sans-serif" font-size="10.5" fill="#FFFFFF">Все по плану, отчет ниже</text>
+                <!-- клиент -->
+                <rect x="136" y="256" width="84" height="18" rx="9" fill="#FFFFFF"/>
+                <text x="146" y="269" font-family="Inter,sans-serif" font-size="9.5" fill="#4A433B">Спасибо Вам!</text>
+              </g>
+            </svg>
           </div>
         </div>
       </div>
@@ -416,8 +546,65 @@
         </div>
         <div class="sol-media">
           <div class="photo-frame">
-            <!-- ЗДЕСЬ: реальное фото технадзора с лазерным уровнем на объекте -->
-            <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="#8FB3C9" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4l9 6 9-6M3 20h18M5 20v-6h14v6M12 10v6"/></svg>
+            <!-- Иллюстрация: независимый технадзор проверяет уровень лазерным нивелиром. Для реального фото замените <svg> на <img src="tehnadzor.jpg" alt="..."> -->
+            <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Независимый технадзор проверяет объект лазерным нивелиром">
+              <defs>
+                <linearGradient id="lWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6F1E8"/><stop offset="1" stop-color="#ECE3D4"/></linearGradient>
+              </defs>
+              <!-- стена и пол -->
+              <rect x="0" y="0" width="400" height="248" fill="url(#lWall)"/>
+              <rect x="0" y="240" width="400" height="10" fill="#D8CBB7"/>
+              <rect x="0" y="250" width="400" height="50" fill="#E4D8C8"/>
+              <!-- сетка -->
+              <line x1="0" y1="90" x2="400" y2="90" stroke="#796F5E" stroke-width="1.5" opacity=".12"/>
+              <line x1="0" y1="150" x2="400" y2="150" stroke="#796F5E" stroke-width="1.5" opacity=".12"/>
+              <line x1="0" y1="210" x2="400" y2="210" stroke="#796F5E" stroke-width="1.5" opacity=".12"/>
+              <line x1="70" y1="0" x2="70" y2="250" stroke="#796F5E" stroke-width="1.5" opacity=".12"/>
+              <line x1="170" y1="0" x2="170" y2="250" stroke="#796F5E" stroke-width="1.5" opacity=".12"/>
+              <line x1="270" y1="0" x2="270" y2="250" stroke="#796F5E" stroke-width="1.5" opacity=".12"/>
+              <!-- лазерные лучи -->
+              <line x1="196" y1="150" x2="400" y2="150" stroke="#4AE06B" stroke-width="10" opacity=".25"/>
+              <line x1="196" y1="150" x2="400" y2="150" stroke="#5CF07A" stroke-width="3" stroke-linecap="round"/>
+              <line x1="330" y1="0" x2="330" y2="250" stroke="#4AE06B" stroke-width="10" opacity=".25"/>
+              <line x1="330" y1="0" x2="330" y2="250" stroke="#5CF07A" stroke-width="3" stroke-linecap="round"/>
+              <!-- мишень -->
+              <circle cx="330" cy="150" r="14" fill="none" stroke="#5CF07A" stroke-width="2.5"/>
+              <line x1="322" y1="150" x2="338" y2="150" stroke="#5CF07A" stroke-width="2.5"/>
+              <line x1="330" y1="142" x2="330" y2="158" stroke="#5CF07A" stroke-width="2.5"/>
+              <!-- отметки -->
+              <g font-family="Inter,sans-serif" font-size="10" fill="#8A7F6D">
+                <line x1="344" y1="110" x2="352" y2="110" stroke="#B8AB93" stroke-width="2"/>
+                <text x="356" y="113">+0.6</text>
+                <line x1="344" y1="150" x2="352" y2="150" stroke="#5CF07A" stroke-width="2"/>
+                <text x="356" y="153">+1.0</text>
+                <line x1="344" y1="190" x2="352" y2="190" stroke="#B8AB93" stroke-width="2"/>
+                <text x="356" y="193">+1.4</text>
+              </g>
+              <!-- штатив -->
+              <ellipse cx="150" cy="258" rx="52" ry="8" fill="#C8B9A3" opacity=".6"/>
+              <line x1="150" y1="180" x2="112" y2="250" stroke="#6B7683" stroke-width="7" stroke-linecap="round"/>
+              <line x1="150" y1="180" x2="150" y2="254" stroke="#6B7683" stroke-width="7" stroke-linecap="round"/>
+              <line x1="150" y1="180" x2="188" y2="250" stroke="#6B7683" stroke-width="7" stroke-linecap="round"/>
+              <!-- нивелир -->
+              <rect x="112" y="118" width="66" height="62" rx="12" fill="#35414D"/>
+              <circle cx="145" cy="112" r="9" fill="#FF7A3D"/>
+              <circle cx="145" cy="134" r="8" fill="#E9F2F7" stroke="#FFFFFF" stroke-width="2"/>
+              <line x1="137" y1="134" x2="153" y2="134" stroke="#6B7683" stroke-width="2"/>
+              <line x1="145" y1="126" x2="145" y2="142" stroke="#6B7683" stroke-width="2"/>
+              <rect x="178" y="130" width="26" height="34" rx="8" fill="#7FA9C4"/>
+              <circle cx="191" cy="147" r="9" fill="#31566E"/>
+              <circle cx="191" cy="147" r="4.5" fill="#5C8FAD"/>
+              <rect x="120" y="158" width="14" height="7" rx="3.5" fill="#4A5561"/>
+              <rect x="140" y="158" width="14" height="7" rx="3.5" fill="#4A5561"/>
+              <circle cx="162" cy="162" r="4" fill="#3FA96B"/>
+              <circle cx="170" cy="162" r="4" fill="#3F7FA9" opacity=".6"/>
+              <!-- карточка-статус -->
+              <rect x="52" y="56" width="132" height="38" rx="14" fill="#FFFFFF"/>
+              <circle cx="72" cy="75" r="11" fill="#3FA96B"/>
+              <path d="M66 75 l4 4 7 -8" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="90" y="71" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#2E2A26">Уровень: ОК</text>
+              <text x="90" y="84" font-family="Inter,sans-serif" font-size="9" fill="#6F6961">точность 0,1 мм / м</text>
+            </svg>
           </div>
         </div>
       </div>
